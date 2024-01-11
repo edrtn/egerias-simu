@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egerias</title>
+    <style>
+        /* Styles pour les ronds */
+        .red-circle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            margin-top: 20px; /* Espace entre le titre et le rond rouge */
+            transition: background-color 0.1s; /* Ajout d'une transition pour une animation fluide */
+        }
+
+        .black-circle {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            margin-top: 20px; /* Espace entre le rond rouge et le rond noir */
+            cursor: pointer; /* Changement du curseur pour indiquer que le rond noir est cliquable */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Egerias</h1>
+
+    <!-- Rond Rouge -->
+    <div class="red-circle" id="redCircle"></div>
+
+    <!-- Rond Noir -->
+    <div class="black-circle" onclick="toggleColor()"></div>
+
+    <script>
+        function toggleColor() {
+            // Sélectionne le rond rouge par son ID
+            var redCircle = document.getElementById('redCircle');
+
+            // Vérifie la couleur actuelle du rond rouge
+            if (redCircle.style.backgroundColor === 'red') {
+                // Change la couleur du rond rouge en vert
+                redCircle.style.backgroundColor = 'green';
+            } else {
+                // Change la couleur du rond rouge en rouge
+                redCircle.style.backgroundColor = 'red';
+            }
+        }
+    </script>
+
+    <!-- Le reste de votre contenu peut être ajouté ici -->
+</body>
+
+</html>
